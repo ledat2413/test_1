@@ -8,7 +8,7 @@ void main() {
 
     expect(find.byType(TextFormField), findsNWidgets(2));
     expect(find.text('Login'), findsOneWidget);
-  });
+  }); //Kiểm tra giao diện có đầy đủ trường email, password và nút đăng nhập hay không.
 
   testWidgets('Shows Error if Email is Empty', (WidgetTester tester) async {
     await tester.pumpWidget(MaterialApp(home: LoginScreen()));
@@ -16,7 +16,7 @@ void main() {
     await tester.pump();
 
     expect(find.text('Enter email'), findsOneWidget);
-  });
+  }); //Kiểm tra thông báo lỗi nếu người dùng bấm đăng nhập mà không nhập email.
 
   testWidgets('Successful Login navigates to Home Screen', (WidgetTester tester) async {
     await tester.pumpWidget(MaterialApp(home: LoginScreen()));
@@ -27,5 +27,5 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Welcome Home!'), findsOneWidget);
-  });
+  }); //Kiểm tra việc điều hướng thành công đến màn hình Home khi đăng nhập đúng thông tin.
 }
