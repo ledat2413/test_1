@@ -28,3 +28,4 @@ void main() {
 
     expect(find.text('Welcome Home!'), findsOneWidget);
   }); //Test successful navigation to the Home screen when logged in with correct credentials.
+}
